@@ -1,21 +1,21 @@
 import pygame
 
-def verificar_colisiones(jugador, plataformas, cajas, enemigos, teclas):
+def verificar_colisiones(jugador, plataformas, cajas, enemigos, trampas, teclas):
     jugador_colisionado = False
 
     for plataforma in plataformas:
         if jugador.hitbox.colliderect(plataforma.hitbox):
-            # Verificar colisión desde abajo (personaje saltó y chocó con el bottom de la plataforma)
+            # Verificar colisión desde abajo 
             if jugador.hitbox_inferior.colliderect(plataforma.hitbox):
                 jugador.y = plataforma.rect.y - jugador.height - 1
                 jugador.salto = False
                 jugador.salto_velocidad = 0
-            # Verificar colisión desde arriba (personaje cayó y chocó con el top de la plataforma)
+            # Verificar colisión desde arriba 
             elif jugador.hitbox_superior.colliderect(plataforma.hitbox):
                 jugador.y = plataforma.rect.y + plataforma.rect.height + 0.5
                 jugador.salto_velocidad = 0
                 jugador_colisionado = True
-            # Verificar colisión desde los lados (personaje chocó con los lados de la plataforma)
+            # Verificar colisión desde los lados 
             elif jugador.hitbox_izquierda.colliderect(plataforma.hitbox) or jugador.hitbox_derecha.colliderect(plataforma.hitbox):
                 if jugador.hitbox_izquierda.colliderect(plataforma.hitbox) and teclas[pygame.K_a]:
                     if jugador.hitbox_inferior.colliderect(plataforma.hitbox):
@@ -81,8 +81,15 @@ def verificar_colisiones(jugador, plataformas, cajas, enemigos, teclas):
                     jugador.y = enemigo.rect.y + enemigo.rect.height + 0.5
                     jugador.salto_velocidad = 0
 
+    for trampa in trampas:
+        if jugador.hitbox.colliderect(trampa.hitbox):
+            jugador.recibir_dano()
+            jugador.perder_vida()
+            print("¡Has sido atrapado por una trampa!")
+
+
     if not jugador_colisionado:
-        # Aplicar gravedad si el jugador no está colisionando con ninguna plataforma o enemigo
+        # Aplicar gravedad si el jugador no está colisionando
         jugador.y += 8
 
     # for objeto_curacion in objetos_curacion:

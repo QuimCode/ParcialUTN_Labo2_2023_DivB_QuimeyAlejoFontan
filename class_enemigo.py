@@ -11,8 +11,10 @@ class Enemigo:
         self.height = height
         self.velocidad = 3  # Velocidad de movimiento del enemigo
 
-        self.imagen = pygame.Surface((width, height))
-        self.imagen.fill((255, 0, 0))  # Color de fondo temporal para representar al enemigo
+        self.imagen = pygame.image.load("Recursos\Modelos\PNG Enemigo Respiracion\Iddle1.png").convert_alpha()
+        self.imagen = pygame.transform.scale(self.imagen, (width, height))
+        # self.imagen = pygame.Surface((width, height))
+        # self.imagen.fill((255, 0, 0))  # Color de fondo temporal para representar al enemigo
 
         self.salto = False
         self.salto_velocidad = 0
@@ -76,6 +78,6 @@ class Enemigo:
         self.hitbox.x = self.x + (self.width - self.hitbox.width) / 2
         self.hitbox.y = self.y + (self.height - self.hitbox.height) / 2
 
-enemigos_nivel1 = [ Enemigo(1500, 1010, 50, 50, 1500, 1900, 5),
-                    Enemigo(1000, 1010, 50, 50, 1000, 1500, 5)
+enemigos_nivel1 = [ Enemigo(1500, 1010, 60, 60, 1500, 1900, 5),
+                    Enemigo(1000, 1010, 60, 60, 1000, 1500, 5)
 ]

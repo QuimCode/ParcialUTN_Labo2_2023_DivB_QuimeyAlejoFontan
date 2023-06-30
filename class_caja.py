@@ -16,12 +16,14 @@ class Caja:
         # pygame.draw.rect(pantalla, self.color, self.rect)
 
     def actualizar(self):
-        # Lógica de actualización de la caja si es necesaria
         pass
 
 cajas_nivel1 = [
     Caja(315, 1010, 50, 50, "Recursos\Super Grotto Escape Files\Props\Sprites\crate.png"),
-    Caja(230, 1000, 60, 60, "Recursos\Super Grotto Escape Files\Props\Sprites\crate.png"),
-    Caja(600, 1000, 70, 70, "Recursos\Super Grotto Escape Files\Props\Sprites\\big-crate.png"),
-    # Agrega más objetos de caja según tus necesidades
+    Caja(1140, 800, 50, 50, "Recursos\Super Grotto Escape Files\Props\Sprites\crate.png"),
+    Caja(1380, 800, 50, 50, "Recursos\Super Grotto Escape Files\Props\Sprites\crate.png"),
+    Caja(370, 1010, 60, 60, "Recursos\Super Grotto Escape Files\Props\Sprites\crate.png"),
+    Caja(788, 1010, 70, 70, "Recursos\Super Grotto Escape Files\Props\Sprites\\big-crate.png"),
+    Caja(1105, 850, 70, 70, "Recursos\Super Grotto Escape Files\Props\Sprites\\big-crate.png"),
+    # Agrega más objetos 
 ]

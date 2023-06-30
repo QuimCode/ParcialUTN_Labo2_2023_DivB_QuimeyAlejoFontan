@@ -37,13 +37,12 @@ class Plataforma:
 # Crear objetos de plataforma
 plataformas_nivel1 = [
     Plataforma(453, 627, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
-    Plataforma(82, 720, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
-    Plataforma(449, 903, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
-    Plataforma(884, 825, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
+    Plataforma(40, 820, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
+    Plataforma(440, 900, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
+    Plataforma(885, 900, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
     Plataforma(874, 525, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
-    Plataforma(1205, 418, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
     Plataforma(421, 627, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
-    Plataforma(1369, 766, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
+    Plataforma(1370, 800, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
     Plataforma(1607, 395, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
     Plataforma(587, 336, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),
     Plataforma(123, 163, 300, 40, "Recursos/Super Grotto Escape Files/Props/Sprites/vent-pipes.png"),

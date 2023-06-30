@@ -2,10 +2,11 @@ import pygame
 import sys
 
 from parametros_visual import *
-from class_enemigo import enemigos_nivel1
+from class_tampa import *
+from class_juego import Juego
 from class_jugador import Personaje
 from class_caja import cajas_nivel1
-from class_juego import Juego
+from class_enemigo import enemigos_nivel1
 from class_plataforma import plataformas_nivel1
 from parametros_sonido import reproducir_musica_nivel1
 from parametros_colisiones import verificar_colisiones
@@ -46,7 +47,7 @@ def nivel_1(tiempo_total):
         teclas = pygame.key.get_pressed()
         Jugador.mover(teclas)
 
-        verificar_colisiones(Jugador, plataformas_nivel1, cajas_nivel1, enemigos_nivel1, teclas)
+        verificar_colisiones(Jugador, plataformas_nivel1, cajas_nivel1, enemigos_nivel1, trampas_nivel1, teclas)
 
         Jugador.actualizar_animacion()
         Jugador.perder_vida()
@@ -88,6 +89,9 @@ def nivel_1(tiempo_total):
             if enemigo.activo:
                 enemigo.dibujar(PANTALLA)
                 enemigo.mover()
+
+        for trampa in trampas_nivel1:
+            trampa.dibujar(PANTALLA)
 
         Jugador.dibujar(PANTALLA)
         mostrar_puntos(PANTALLA, Jugador.puntos, tiempo_restante, Jugador.vida, Jugador.oportunidades_revivir)
